@@ -7,27 +7,17 @@
 # p "#{item3[:name]} are on sale for $#{item3[:price]}. We have #{item3[:number_of_items]} in stock."
 
 class Store_inventory
-  def name= (input_name)
-    @name = input_name
-  end
+  attr_reader :name, :price, :number_of_items
+  attr_writer :name, :price, :number_of_items
 
-  def price= (input_price)
-    @price = input_price
-  end
-
-  def number_of_items= (number_of_items)
-    @number_of_items = number_of_items
-  end
-
-  def name
-    @name
-  end
-
-  def price
-    @price
-  end
-
-  def number_of_items
-    @number_of_items
+  def inventory
+    p "#{@name} are on sale for $#{@price}. We have #{@number_of_items} available"
   end
 end
+
+item1 = Store_inventory.new
+item1.name = "Carrots"
+item1.price = "1.00"
+item1.number_of_items = 20
+item1.inventory
+
