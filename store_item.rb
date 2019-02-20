@@ -17,7 +17,7 @@ class Store_inventory
   end
 
   def inventory
-    p "#{@name} are on sale for $#{@price}. We have #{@number_of_items} available"
+    p "#{@name} are on sale for $#{@price}. We have #{@number_of_items} in stock."
   end
 end
 
