@@ -21,8 +21,10 @@ class Store_inventory
   end
 end
 
-item1 = Store_inventory.new(name:"Carrots", price: "1.00", number_of_items: 21)
+item1 = Store_inventory.new(name:"Carrots", price: "1.00", number_of_items: 20)
 item1.inventory
-item2 = Store_inventory.new(name:"Apples",price: "1.23", number_of_items: 15)
+item2 = Store_inventory.new(name:"Apples", price: "1.23", number_of_items: 15)
 item2.inventory
+item3 = Store_inventory.new(name:"Oranges", price: "1.50", number_of_items: 23)
+item3.inventory
 
