@@ -6,7 +6,7 @@
 # p "#{item2[:name]} are on sale for $#{item2[:price]}. We have #{item2[:number_of_items]} in stock."
 # p "#{item3[:name]} are on sale for $#{item3[:price]}. We have #{item3[:number_of_items]} in stock."
 
-class Store_inventory
+class StoreInventory
   attr_reader :name, :price, :number_of_items
   attr_writer :name, :price, :number_of_items
 
@@ -21,14 +21,14 @@ class Store_inventory
   end
 end
 
-# item1 = Store_inventory.new(name:"Carrots", price: "1.00", number_of_items: 20)
+# item1 = StoreInventory.new(name:"Carrots", price: "1.00", number_of_items: 20)
 # item1.inventory
-# item2 = Store_inventory.new(name:"Apples", price: "1.23", number_of_items: 15)
+# item2 = StoreInventory.new(name:"Apples", price: "1.23", number_of_items: 15)
 # item2.inventory
-# item3 = Store_inventory.new(name:"Oranges", price: "1.50", number_of_items: 23)
+# item3 = StoreInventory.new(name:"Oranges", price: "1.50", number_of_items: 23)
 # item3.inventory
 
-class Food < Store_inventory
+class Food < StoreInventory
   attr_reader :shelf_life
   attr_writer :shelf_life
 
