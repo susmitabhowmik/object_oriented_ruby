@@ -21,10 +21,28 @@ class Store_inventory
   end
 end
 
-item1 = Store_inventory.new(name:"Carrots", price: "1.00", number_of_items: 20)
-item1.inventory
-item2 = Store_inventory.new(name:"Apples", price: "1.23", number_of_items: 15)
-item2.inventory
-item3 = Store_inventory.new(name:"Oranges", price: "1.50", number_of_items: 23)
-item3.inventory
+# item1 = Store_inventory.new(name:"Carrots", price: "1.00", number_of_items: 20)
+# item1.inventory
+# item2 = Store_inventory.new(name:"Apples", price: "1.23", number_of_items: 15)
+# item2.inventory
+# item3 = Store_inventory.new(name:"Oranges", price: "1.50", number_of_items: 23)
+# item3.inventory
 
+class Food < Store_inventory
+  attr_reader :shelf_life
+  attr_writer :shelf_life
+
+  def shelf_life
+    p "The shelf life of this item is #{@shelf_life}."
+  end
+end
+
+item1 = Food.new(name:"Carrots", price: "1.00", number_of_items: 20)
+item1.shelf_life="2 weeks"
+item1.shelf_life
+item2 = Food.new(name:"Apples", price: "1.23", number_of_items: 15)
+item2.shelf_life="1 week"
+item2.shelf_life
+item3 = Food.new(name:"Oranges", price: "1.50", number_of_items: 23)
+item3.shelf_life="3 weeks"
+item3.shelf_life
